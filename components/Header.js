@@ -44,9 +44,6 @@ const Header = () => {
       ? setGlobalState("mode", "dark")
       : setGlobalState("mode", "light");
   }
-  function handleDefault() {
-    setNavbar(pages.indexOf(router.route));
-  }
   const LinkTab = (props) => {
     const router = useRouter();
 
@@ -61,7 +58,7 @@ const Header = () => {
     return <Tab component="a" onClick={(e) => handleTabChange(e)} {...props} />;
   };
   useEffect(() => {
-    handleDefault();
+    setNavbar(pages.indexOf(router.route));
   }, []);
   return (
     <AppBar className="nav glass">

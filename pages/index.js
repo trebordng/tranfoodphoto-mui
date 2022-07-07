@@ -7,7 +7,6 @@ import { getBackgroundImages } from "../services";
 import Image from "next/image";
 const index = ({ images }) => {
   if (images !== undefined) {
-    console.log([useGlobalState("loading")])
     setGlobalState("loading", false);
   }
   return (
