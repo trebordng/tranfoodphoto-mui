@@ -1,22 +1,21 @@
 import { Button } from "@mui/material";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect,useCallback } from "react";
 import BookLayout from "../components/BookLayout";
 import { setGlobalState, useGlobalState } from "../state/index";
 import { getBackgroundImages } from "../services";
 import Image from "next/image";
 const Index = ({ images, checkImages }) => {
-    const onLoad = () => {
-        setGlobalState("loading", false);
-        console.log('done')
+    function onLoad(){
+        setGlobalState('loading',false)
     }
   useEffect(() => {
-     
+    
   }, []);
   return (
     <BookLayout>
       <Image
-        onLoad={onLoad()}
+      onLoad={onLoad}
         alt={images[0].alt}
         title={images[0].title}
         src={images[0].image.url}

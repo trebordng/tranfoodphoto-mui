@@ -80,6 +80,14 @@ option {
   background-color: var(--glass-color);
 }
 
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
 /* button configuration */
 
 /* image */

@@ -7,14 +7,18 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 const BookLayout = ({ children }) => {
   const [isLoading] = useGlobalState("loading");
-  return isLoading === true ? (
-    <div className="loading-bg">
-      <CircularProgress className="loading" />
-    </div>
-  ) : (
-    <Fade>
-      <Box className="book glass">{children}</Box>
-    </Fade>
+  return (
+    <>
+      {isLoading === true && (
+        <div className="loading-bg">
+          <CircularProgress className="loading" />
+        </div>
+      )}
+
+      <Fade className={isLoading? "hidden" : "visible"}>
+        <Box className="book glass">{children}</Box>
+      </Fade>
+    </>
   );
 };
 
