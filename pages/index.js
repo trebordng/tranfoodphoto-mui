@@ -8,15 +8,15 @@ import Image from "next/image";
 const Index = ({ images, checkImages }) => {
     const onLoad = () => {
         setGlobalState("loading", false);
+        console.log('done')
     }
   useEffect(() => {
-    onLoad();
-   
+     
   }, []);
   return (
     <BookLayout>
       <Image
-        onLoad={onLoad}
+        onLoad={onLoad()}
         alt={images[0].alt}
         title={images[0].title}
         src={images[0].image.url}
