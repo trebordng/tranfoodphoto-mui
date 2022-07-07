@@ -6,17 +6,17 @@ import { setGlobalState, useGlobalState } from "../state/index";
 import { getBackgroundImages } from "../services";
 import Image from "next/image";
 const Index = ({ images, checkImages }) => {
-    
-  useEffect(() => {
-    console.log(images)
-    checkImages &&
-     
+    const onLoad = () => {
         setGlobalState("loading", false);
+    }
+  useEffect(() => {
+    onLoad();
    
   }, []);
   return (
     <BookLayout>
       <Image
+        onLoad={onLoad}
         alt={images[0].alt}
         title={images[0].title}
         src={images[0].image.url}
@@ -32,13 +32,10 @@ const Index = ({ images, checkImages }) => {
 export default Index;
 export async function getStaticProps() {
   setGlobalState("loading", true);
-  let checkImages = false;
   const images = (await getBackgroundImages()) || [];
-  if (images !== undefined) {
-    checkImages = true;
-  }
+  
 
   return {
-    props: { images, checkImages },
+    props: { images},
   };
 }
