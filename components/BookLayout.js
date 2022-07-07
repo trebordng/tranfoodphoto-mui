@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { setGlobalState, useGlobalState } from "../state/index";
-import { Fade } from "react-awesome-reveal";
+import  Fade  from "react-awesome-reveal";
 import CircularProgress from "@mui/material/CircularProgress";
 
 const BookLayout = ({ children }) => {
