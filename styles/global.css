@@ -83,47 +83,59 @@ option {
 /* button configuration */
 
 /* image */
-.bg-image{
+.bg-image {
   border-radius: 0.5rem;
 }
+
 /* image */
 
 /* Customizing MUI  */
 
 .MuiToolbar-root {
-  justify-content: space-between;
+  justify-content: space-between !important;
 }
+
 .MuiSwitch-root {
-  margin-left: auto;
+  margin-left: auto !important;
 }
+
 .MuiTab-root {
-  color: var(--navText-color);
-  max-width: 110px;
+  color: var(--navText-color) !important;
+  max-width: 110px !important;
 }
+
 .MuiSwitch-thumb {
-  color: var(--heading-color)
+  color: var(--heading-color) !important;
 }
+
 .Mui-checked {
   color: var(--heading-color) !important;
 }
+
 .MuiSwitch-track {
   background-color: var(--navText-color) !important;
 }
+
 .MuiTab-root:hover {
-  color: var(--hover-color);
+  color: var(--hover-color) !important;
 }
+
 .MuiTab-root.Mui-selected {
   color: var(--heading-color) !important;
 }
+
 .MuiTabs-indicator {
-  background-color: var(--heading-color)
+  background-color: var(--heading-color) !important;
 }
+
 .menu {
-  color: var(--heading-color);
-  font-size: 30px;
+  color: var(--heading-color) !important;
+  font-size: 30px !important;
 }
+
 .MuiTab-iconWrapper {
-  cursor: not-allowed;
-  pointer-events: none;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
 }
+
 /* Customizing MUI  */
