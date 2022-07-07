@@ -6,8 +6,13 @@ import { setGlobalState, useGlobalState } from "../state/index";
 import { getBackgroundImages } from "../services";
 import Image from "next/image";
 const Index = ({ images, checkImages }) => {
-  checkImages && setGlobalState("loading", false);
-
+    
+  useEffect(() => {
+    checkImages &&
+     
+        setGlobalState("loading", false);
+   
+  }, []);
   return (
     <BookLayout>
       <Image
