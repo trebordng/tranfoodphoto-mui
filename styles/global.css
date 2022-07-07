@@ -17,7 +17,7 @@ body {
 .background-box {
   background: var(--background-color);
   min-height: 100vh;
-  padding: 5vh 0;
+  padding:5vh 0 0 0;
 }
 
 .glass {
@@ -28,9 +28,11 @@ body {
 }
 
 .nav {
+ 
   border-radius: 0.5em;
   position: unset !important;
   background: var(--glass-color) !important;
+  margin-bottom: 5vh;
 }
 
 .heading {
@@ -39,12 +41,21 @@ body {
 
 .book {
   margin: 5vh 0 0 0;
-  height: calc(100vh - 20vh - 64px);
   background: var(--glass-color);
   border-radius: 0.5rem;
   position: relative;
+  height: calc(100vh - 17vh - 64px);
 }
-
+@media screen and (max-width:600px) {
+  .book{
+    height: calc(100vh - 56px - 15vh);
+  }
+}
+@media screen and (min-width:601px) and ( max-width:900px) {
+  .book{
+    height: calc(100vh - 64px - 15vh);
+  }
+}
 .loading-bg {
   margin: 5vh 0 0 0;
   height: calc(100vh - 20vh - 64px);
