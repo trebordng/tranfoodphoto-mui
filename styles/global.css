@@ -30,7 +30,7 @@ body {
 .nav {
   border-radius: 0.5em;
   position: unset !important;
-  background: var(--glass-color);
+  background: var(--glass-color) !important;
 }
 
 .heading {
