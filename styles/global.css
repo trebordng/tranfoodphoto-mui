@@ -54,7 +54,7 @@ body {
 }
 
 .loading {
-  color: var(--heading-color);
+  color: var(--heading-color) !important;
   width: 80px !important;
   height: 80px !important;
 }
