@@ -8,6 +8,7 @@ import Image from "next/image";
 const Index = ({ images, checkImages }) => {
     
   useEffect(() => {
+    console.log(images)
     checkImages &&
      
         setGlobalState("loading", false);
