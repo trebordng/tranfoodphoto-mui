@@ -5,7 +5,7 @@ import {
   ListItemButton,
   ListItemText,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import WidgetsIcon from "@mui/icons-material/Widgets";
 import en from "../locales/en";
 import vie from "../locales/vie";
@@ -47,6 +47,12 @@ const NavDrawer = () => {
       ? setGlobalState("mode", "dark")
       : setGlobalState("mode", "light");
   }
+  useEffect(() => {
+    const myIndex = navList.findIndex((el) => el.slug === router.route);
+    
+    setSelectedIndex(myIndex);
+
+  }, []);
   return (
     <React.Fragment>
       <Drawer open={drawer} onClose={() => setDrawer(false)}>

@@ -89,6 +89,7 @@ const Header = () => {
                 ></LinkTab>
               ) : (
                 <LinkTab
+                 className="logo"
                   disabled
                   icon={
                     <Image
