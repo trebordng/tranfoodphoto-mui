@@ -2,7 +2,7 @@ import { createGlobalState } from "react-hooks-global-state";
 
 const {setGlobalState,useGlobalState} = createGlobalState({
     mode:'light',
-    loading:'true',
+    loading:true,
     cover:""
 })
 

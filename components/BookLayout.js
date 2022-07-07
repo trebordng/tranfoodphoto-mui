@@ -7,7 +7,6 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 const BookLayout = ({ children }) => {
   const [isLoading] = useGlobalState("loading");
-
   return isLoading === true ? (
     <div className="loading-bg">
       <CircularProgress className="loading" />
