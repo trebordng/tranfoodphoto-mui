@@ -113,7 +113,7 @@ option {
   color: var(--hover-color);
 }
 .MuiTab-root.Mui-selected {
-  color: var(--heading-color)
+  color: var(--heading-color) !important;
 }
 .MuiTabs-indicator {
   background-color: var(--heading-color)
