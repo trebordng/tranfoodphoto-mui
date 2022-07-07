@@ -7,7 +7,10 @@ import { getBackgroundImages } from "../services";
 import Image from "next/image";
 const Index = ({ images, checkImages }) => {
   useEffect(() => {
-    checkImages && setGlobalState("loading", false);
+    checkImages &&
+      setTimeout(() => {
+        setGlobalState("loading", false);
+      }, 300);
   }, []);
   return (
     <BookLayout>
