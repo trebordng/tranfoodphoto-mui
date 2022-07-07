@@ -5,7 +5,7 @@ import BookLayout from "../components/BookLayout";
 import { setGlobalState, useGlobalState } from "../state/index";
 import { getBackgroundImages } from "../services";
 import Image from "next/image";
-const index = ({ images, checkImages }) => {
+const Index = ({ images, checkImages }) => {
   useEffect(() => {
     checkImages && setGlobalState("loading", false);
   }, []);
@@ -24,7 +24,7 @@ const index = ({ images, checkImages }) => {
   );
 };
 
-export default index;
+export default Index;
 export async function getStaticProps() {
   setGlobalState("loading", true);
   let checkImages = false;
