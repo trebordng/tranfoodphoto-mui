@@ -10,7 +10,7 @@ const Index = ({ images, checkImages }) => {
     checkImages &&
       setTimeout(() => {
         setGlobalState("loading", false);
-      }, 300);
+      },1000);
   }, []);
   return (
     <BookLayout>
