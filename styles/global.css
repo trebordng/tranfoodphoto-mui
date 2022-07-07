@@ -17,7 +17,7 @@ body {
 .background-box {
   background: var(--background-color);
   min-height: 100vh;
-  padding:5vh 0 0 0;
+  padding: 5vh 0 0 0;
 }
 
 .glass {
@@ -28,7 +28,7 @@ body {
 }
 
 .nav {
- 
+
   border-radius: 0.5em;
   position: unset !important;
   background: var(--glass-color) !important;
@@ -44,18 +44,21 @@ body {
   background: var(--glass-color);
   border-radius: 0.5rem;
   position: relative;
-  height: calc(100vh - 17vh - 64px);
+  height: calc(100vh - 15vh - 99px);
 }
+
 @media screen and (max-width:600px) {
-  .book{
+  .book {
     height: calc(100vh - 56px - 15vh);
   }
 }
-@media screen and (min-width:601px) and ( max-width:900px) {
-  .book{
+
+@media screen and (min-width:601px) and (max-width:900px) {
+  .book {
     height: calc(100vh - 64px - 15vh);
   }
 }
+
 .loading-bg {
   margin: 5vh 0 0 0;
   height: calc(100vh - 20vh - 64px);
@@ -75,14 +78,22 @@ body {
   justify-content: flex-end;
   flex-direction: column-reverse;
 }
+.logo{
+  padding-left:0 !important;
+}
 
 /* Background */
 /* button configuration */
 .select-language {
   background: transparent;
-  border: transparent;
+
+  border: 1px solid var(--navText-color);
   color: var(--navText-color);
   outline: none;
+}
+
+option {
+  background-color: red;
 }
 
 
@@ -98,7 +109,9 @@ option {
 .visible {
   opacity: 1;
 }
-
+.text-logo{
+  color:var(--heading-color)
+}
 /* button configuration */
 
 /* image */
@@ -109,6 +122,11 @@ option {
 /* image */
 
 /* Customizing MUI  */
+.MuiDrawer-paper {
+  background: var(--background-color) !important;
+  width: 40vw !important;
+  color: var(--navText-color);
+}
 
 .MuiToolbar-root {
   justify-content: space-between !important;
@@ -139,10 +157,13 @@ option {
   color: var(--hover-color) !important;
 }
 
-.MuiTab-root.Mui-selected {
+.MuiTab-root.Mui-selected,
+.MuiListItem-root.Mui-selected {
   color: var(--heading-color) !important;
 }
-
+.MuiListItem-root.Mui-selected{
+  background-color: var(--navText-color);
+}
 .MuiTabs-indicator {
   background-color: var(--heading-color) !important;
 }
@@ -161,10 +182,14 @@ option {
 
 /* fade in */
 .fade-in {
-  -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 1.5s; /* Firefox < 16 */
-  -ms-animation: fadein 1.5s; /* Internet Explorer */
-  -o-animation: fadein 1.5s; /* Opera < 12.1 */
+  -webkit-animation: fadein 1.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1.5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 1.5s;
+  /* Internet Explorer */
+  -o-animation: fadein 1.5s;
+  /* Opera < 12.1 */
   animation: fadein 1.5s;
 }
 
@@ -172,6 +197,7 @@ option {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -182,6 +208,7 @@ option {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -192,6 +219,7 @@ option {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -202,6 +230,7 @@ option {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

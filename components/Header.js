@@ -34,7 +34,7 @@ const Header = () => {
   const theme = useTheme();
   const isMed = useMediaQuery(theme.breakpoints.down("md"));
   const pages = ["", "/", "/about", "/album", "/blog", "/recipe", "/contact"];
-  function switchLanguage(e){
+  function switchLanguage(e) {
     const locale = e.target.value;
     router.push(router.pathname, router.asPath, { locale });
   }
@@ -65,7 +65,7 @@ const Header = () => {
       <Toolbar>
         {isMed ? (
           <React.Fragment>
-            <Typography className="heading">TRANFOODPHOTOGRAPHY</Typography>
+            <Typography className="text-logo">TRAN PHOTOGRAPHY</Typography>
             <NavDrawer />
           </React.Fragment>
         ) : (
@@ -74,6 +74,7 @@ const Header = () => {
               {currentMode === "light" ? (
                 <LinkTab
                   disabled
+                  className="logo"
                   icon={
                     <Image
                       alt="diep-tran-photography"
@@ -134,7 +135,11 @@ const Header = () => {
               ></LinkTab>
             </Tabs>
             <div className="right-nav">
-              <select defaultValue={locale} className="select-language" onChange={switchLanguage}>
+              <select
+                defaultValue={locale}
+                className="select-language"
+                onChange={switchLanguage}
+              >
                 <option value="en">English</option>
                 <option value="vie">Tiếng Việt</option>
               </select>
