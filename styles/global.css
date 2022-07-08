@@ -4,6 +4,8 @@
   --hover-color: none;
   --navText-color: none;
   --heading-color: none;
+  --pageTitle-color: none;
+  --pageAuthor-color: none;
 }
 
 html,
@@ -21,11 +23,13 @@ body {
 }
 
 .glass {
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
 }
+
+
 
 .nav {
 
@@ -46,21 +50,48 @@ body {
   height: calc(100vh - 15vh - 99px);
 }
 
+.book-title {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  top: 50%;
+  left: 200px;
+  width: 300px;
+  text-align: center;
+}
+
 @media screen and (max-width:600px) {
-  .background-box{
-    padding:2vh 0 0 0;
+  .background-box {
+    padding: 2vh 0 0 0;
   }
-  .nav{
-    margin-bottom:2vh;
+
+  .nav {
+    margin-bottom: 2vh;
   }
-  .book,.loading-bg {
+
+  .book,
+  .loading-bg {
 
     height: calc(100vh - 56px - 6vh);
+  }
+
+  .MuiDrawer-paper {
+    width: 40vw !important;
+  }
+
+  .book-title {
+    left: 50%;
   }
 }
 
 @media screen and (min-width:601px) and (max-width:900px) {
-  .book,.loading-bg {
+
+  .book-title {
+    left: 50%;
+  }
+
+  .book,
+  .loading-bg {
     height: calc(100vh - 64px - 15vh);
   }
 }
@@ -94,13 +125,10 @@ body {
 .select-language {
   background: transparent;
 
-  border: 1px solid var(--heading-color);
-  color: var(--heading-color);
+  border: 1px solid var(--navText-color);
+  color: var(--navText-color);
   outline: none;
 }
-
-
-
 
 .hidden {
   opacity: 0;
@@ -111,14 +139,41 @@ body {
 }
 
 .text-logo {
-  color: var(--heading-color)
+  color: var(--heading-color);
+  font-weight: bold;
 }
 
 /* button configuration */
 
+/* text */
+
+h5 {
+  color: var(--pageTitle-color) !important;
+  font-weight: bolder !important;
+}
+
+h6 {
+  color: var(--pageAuthor-color) !important;
+  font-weight: lighter !important;
+}
+
+/* text */
+
 /* image */
 .bg-image {
   border-radius: 0.5rem;
+}
+
+.home-button {
+  margin-top: 2vh;
+  color: var(--pageTitle-color);
+  font-weight: bolder;
+  border: 2px solid var(--pageTitle-color);
+}
+
+.home-button:hover {
+  border: 2px solid var(--pageTitle-color);
+
 }
 
 /* image */
@@ -126,7 +181,7 @@ body {
 /* Customizing MUI  */
 .MuiDrawer-paper {
   background: var(--background-color) !important;
-  width: 40vw !important;
+  min-width: 25vw !important;
   color: var(--navText-color) !important;
 }
 
@@ -141,7 +196,13 @@ body {
 .MuiTab-root {
   color: var(--navText-color) !important;
   max-width: 110px !important;
+
 }
+
+.MuiTab-root,
+select,
+.text-logo,
+.MuiTypography-root {}
 
 .MuiSwitch-thumb {
   color: var(--heading-color) !important;
@@ -164,6 +225,7 @@ body {
   color: var(--heading-color) !important;
   font-weight: bold !important;
 }
+
 
 .MuiListItem-root.Mui-selected {
   background-color: var(--navText-color) !important;

@@ -5,7 +5,7 @@ import {
   ListItemButton,
   ListItemText,
 } from "@mui/material";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import WidgetsIcon from "@mui/icons-material/Widgets";
 import en from "../locales/en";
 import vie from "../locales/vie";
@@ -33,6 +33,7 @@ const NavDrawer = () => {
   const navList = [
     { name: t.home, slug: "/" },
     { name: t.about, slug: "/about" },
+    { name: t.album, slug: "/album" },
     { name: t.recipe, slug: "/recipe" },
     { name: t.blog, slug: "/blog" },
     { name: t.contact, slug: "/contact" },
@@ -49,36 +50,37 @@ const NavDrawer = () => {
   }
   useEffect(() => {
     const myIndex = navList.findIndex((el) => el.slug === router.route);
-    
-    setSelectedIndex(myIndex);
 
+    setSelectedIndex(myIndex);
   }, []);
   return (
     <React.Fragment>
       <Drawer open={drawer} onClose={() => setDrawer(false)}>
         <List>
           <ListItem>
-            {currentMode === "light" ? (
-              <Image
-                alt="diep-tran-photography"
-                title="diep-tran-photography"
-                src={logo.src}
-                width={100}
-                height={80}
-                objectFit="contain"
-                quality={100}
-              />
-            ) : (
-              <Image
-                alt="diep-tran-photography"
-                title="diep-tran-photography"
-                src={logoDark.src}
-                width={100}
-                height={80}
-                objectFit="contain"
-                quality={100}
-              />
-            )}
+            <ListItemText>
+              {currentMode === "light" ? (
+                <Image
+                  alt="diep-tran-photography"
+                  title="diep-tran-photography"
+                  src={logo.src}
+                  width={100}
+                  height={80}
+                  objectFit="contain"
+                  quality={100}
+                />
+              ) : (
+                <Image
+                  alt="diep-tran-photography"
+                  title="diep-tran-photography"
+                  src={logoDark.src}
+                  width={100}
+                  height={80}
+                  objectFit="contain"
+                  quality={100}
+                />
+              )}
+            </ListItemText>
           </ListItem>
           {navList.map((page, index) => (
             <Link href={page.slug} key={index} passHref>
@@ -93,21 +95,26 @@ const NavDrawer = () => {
             </Link>
           ))}
           <ListItem>
-            <select
-              defaultValue={locale}
-              className="select-language"
-              onChange={switchLanguage}
-            >
-              <option value="en">English</option>
-              <option value="vie">Tiếng Việt</option>
-            </select>
+            <ListItemText>
+              <select
+                defaultValue={locale}
+                className="select-language"
+                onChange={switchLanguage}
+              >
+                <option value="en">English</option>
+                <option value="vie">Tiếng Việt</option>
+              </select>
+            </ListItemText>
           </ListItem>
+
           <ListItem>
-            <Switch
-              checked={checked}
-              onChange={switchMode}
-              inputProps={{ "aria-label": "controlled" }}
-            />
+            <ListItemText>
+              <Switch
+                checked={checked}
+                onChange={switchMode}
+                inputProps={{ "aria-label": "controlled" }}
+              />
+            </ListItemText>
           </ListItem>
         </List>
       </Drawer>
