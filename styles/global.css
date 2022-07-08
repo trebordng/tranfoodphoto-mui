@@ -40,7 +40,6 @@ body {
 }
 
 .book {
-  margin: 5vh 0 0 0;
   background: var(--glass-color);
   border-radius: 0.5rem;
   position: relative;
@@ -48,13 +47,20 @@ body {
 }
 
 @media screen and (max-width:600px) {
-  .book {
-    height: calc(100vh - 56px - 15vh);
+  .background-box{
+    padding:2vh 0 0 0;
+  }
+  .nav{
+    margin-bottom:2vh;
+  }
+  .book,.loading-bg {
+
+    height: calc(100vh - 56px - 6vh);
   }
 }
 
 @media screen and (min-width:601px) and (max-width:900px) {
-  .book {
+  .book,.loading-bg {
     height: calc(100vh - 64px - 15vh);
   }
 }
@@ -78,8 +84,9 @@ body {
   justify-content: flex-end;
   flex-direction: column-reverse;
 }
-.logo{
-  padding-left:0 !important;
+
+.logo {
+  padding-left: 0 !important;
 }
 
 /* Background */
@@ -87,20 +94,13 @@ body {
 .select-language {
   background: transparent;
 
-  border: 1px solid var(--navText-color);
-  color: var(--navText-color);
+  border: 1px solid var(--heading-color);
+  color: var(--heading-color);
   outline: none;
 }
 
-option {
-  background-color: red;
-}
 
 
-
-option {
-  background-color: var(--glass-color);
-}
 
 .hidden {
   opacity: 0;
@@ -109,9 +109,11 @@ option {
 .visible {
   opacity: 1;
 }
-.text-logo{
-  color:var(--heading-color)
+
+.text-logo {
+  color: var(--heading-color)
 }
+
 /* button configuration */
 
 /* image */
@@ -125,7 +127,7 @@ option {
 .MuiDrawer-paper {
   background: var(--background-color) !important;
   width: 40vw !important;
-  color: var(--navText-color);
+  color: var(--navText-color) !important;
 }
 
 .MuiToolbar-root {
@@ -160,10 +162,13 @@ option {
 .MuiTab-root.Mui-selected,
 .MuiListItem-root.Mui-selected {
   color: var(--heading-color) !important;
+  font-weight: bold !important;
 }
-.MuiListItem-root.Mui-selected{
+
+.MuiListItem-root.Mui-selected {
   background-color: var(--navText-color) !important;
 }
+
 .MuiTabs-indicator {
   background-color: var(--heading-color) !important;
 }
