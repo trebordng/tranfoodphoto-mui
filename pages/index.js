@@ -25,15 +25,17 @@ const Index = ({ images, checkImages }) => {
         quality={100}
         className="bg-image"
       />
-      <Box className={loading ? "book-title" : "hidden"}>
-        <Typography variant="h5">{t.pageTitle}</Typography>
-        <Typography variant="h6">{t.pageAuthor}</Typography>
-        <Link href="/about" passHref>
-          <Button variant="outlined" className="home-button">
-            {t.open}
-          </Button>
-        </Link>
-      </Box>
+      {loading && (
+        <Box className="book-title">
+          <Typography variant="h5">{t.pageTitle}</Typography>
+          <Typography variant="h6">{t.pageAuthor}</Typography>
+          <Link href="/about" passHref>
+            <Button variant="outlined" className="home-button">
+              {t.open}
+            </Button>
+          </Link>
+        </Box>
+      )}
     </BookLayout>
   );
 };
