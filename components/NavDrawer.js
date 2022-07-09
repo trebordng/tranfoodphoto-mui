@@ -52,7 +52,7 @@ const NavDrawer = () => {
     const myIndex = navList.findIndex((el) => el.slug === router.route);
 
     setSelectedIndex(myIndex);
-  }, []);
+  }, [router.asPath]);
   return (
     <React.Fragment>
       <Drawer open={drawer} onClose={() => setDrawer(false)}>
