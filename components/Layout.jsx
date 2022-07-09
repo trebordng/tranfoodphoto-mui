@@ -5,7 +5,6 @@ import { setGlobalState, useGlobalState } from "../state/index";
 import Header from "./Header";
 import Container from "@mui/material/Container";
 import { Box } from "@mui/material";
-import CircularProgress from "@mui/material/CircularProgress";
 
 function Layout({ children }) {
   const [currentMode] = useGlobalState("mode");

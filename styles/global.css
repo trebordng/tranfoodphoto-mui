@@ -67,7 +67,7 @@ body {
 .book-title {
   text-align: center;
   background: var(--glass-color);
-  padding: 6vw 6vh;
+  padding: 5vh 5vw;
   border-radius: 0.5rem;
 }
 
@@ -108,15 +108,15 @@ body {
 /* Background */
 /* button configuration */
 .select-language {
-  background: transparent;
-
   border: 1px solid var(--navText-color);
   color: var(--navText-color);
   outline: none;
+  background: transparent;
 }
 
 option {
-  background-color: var(--pageTitle-color);
+  color: var(--heading-color);
+  background-color: var(--navText-color);
 }
 
 
@@ -129,8 +129,16 @@ option {
   font-weight: bold;
 }
 
+.portrait-home {
+  margin: 2vh 0 !important;
+}
+
+.pretty-lady {
+  border-radius: 50%;
+  object-position: 10% 10%;
+}
+
 .home-button {
-  margin-top: 2vh !important;
   color: var(--pageTitle-color) !important;
   font-weight: bolder !important;
   border: 2px solid var(--pageTitle-color) !important;

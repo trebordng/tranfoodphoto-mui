@@ -85,6 +85,7 @@ const Header = () => {
                       height={80}
                       objectFit="contain"
                       quality={100}
+                      priority
                     />
                   }
                 ></LinkTab>
@@ -101,6 +102,7 @@ const Header = () => {
                       height={80}
                       objectFit="contain"
                       quality={100}
+                      priority
                     />
                   }
                 ></LinkTab>

@@ -68,6 +68,7 @@ const NavDrawer = () => {
                   height={80}
                   objectFit="contain"
                   quality={100}
+                  priority
                 />
               ) : (
                 <Image
@@ -78,6 +79,7 @@ const NavDrawer = () => {
                   height={80}
                   objectFit="contain"
                   quality={100}
+                  priority
                 />
               )}
             </ListItemText>
