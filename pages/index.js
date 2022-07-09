@@ -16,9 +16,9 @@ const Index = ({ images, checkImages }) => {
   function onLoad() {
     setGlobalState("loading", false);
   }
-  useEffect(() => {
-    setGlobalState("loading", true);
-  }, []);
+  
+  
+
   return (
     <BookLayout>
       <Image
@@ -46,6 +46,7 @@ const Index = ({ images, checkImages }) => {
 
 export default Index;
 export async function getStaticProps() {
+  setGlobalState("loading", true);
   const images = (await getBackgroundImages()) || [];
 
   return {

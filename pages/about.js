@@ -13,43 +13,15 @@ const About = ({ images, checkImages }) => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : vie;
-  function onLoad() {
-    setGlobalState("loading", false);
-  }
-  useEffect(() => {
-    setGlobalState("loading", true);
-  }, []);
+  
+
+   
+
   return (
     <BookLayout>
-      <Image
-        onLoad={onLoad}
-        alt={images[0].alt}
-        title={images[0].title}
-        src={images[0].image.url}
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        className="bg-image"
-      />
-      <div className="book-title">
-        <Typography variant="h5">{t.pageTitle}</Typography>
-        <Typography variant="h6">{t.pageAuthor}</Typography>
-        <Link href="/about" passHref>
-          <Button variant="outlined" className="home-button">
-            {t.open}
-          </Button>
-        </Link>
-      </div>
+      
     </BookLayout>
   );
 };
 
 export default About;
-export async function getStaticProps() {
-  setGlobalState("loading", true);
-  const images = (await getBackgroundImages()) || [];
-
-  return {
-    props: { images },
-  };
-}
