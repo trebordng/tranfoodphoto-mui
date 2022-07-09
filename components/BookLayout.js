@@ -13,7 +13,7 @@ const BookLayout = ({ children }) => {
           <CircularProgress className="loading" />
         </div>
       )}
-      <article className={isLoading ? "hidden" : "visible fade-in"}>
+      <article className={isLoading ? "hidden" : "fade-in"}>
         <Box className="book glass">{children}</Box>
       </article>
     </>

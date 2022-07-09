@@ -152,8 +152,8 @@ option {
   opacity: 0;
 }
 
-.visible {
-  opacity: 1;
+.invisible {
+  visibility: hidden;
 }
 
 .text-logo {
