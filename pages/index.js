@@ -29,7 +29,7 @@ const Index = ({ images, checkImages }) => {
         quality={100}
         className="bg-image"
       />
-      <div className={isLoading?"invisible":"book-title"}>
+      <div className="book-title">
         <Typography variant="h5">{t.pageTitle}</Typography>
         <Typography variant="h6">{t.pageAuthor}</Typography>
         <Link href="/about" passHref>
