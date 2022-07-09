@@ -28,7 +28,7 @@ const Index = ({ images, checkImages }) => {
         quality={100}
         className="bg-image"
       />
-      <Box className="book-title" component="div">
+      <div className="book-title">
         <Typography variant="h5">{t.pageTitle}</Typography>
         <Typography variant="h6">{t.pageAuthor}</Typography>
         <Link href="/about" passHref>
@@ -36,7 +36,7 @@ const Index = ({ images, checkImages }) => {
             {t.open}
           </Button>
         </Link> 
-      </Box>
+      </div>
     </BookLayout>
   );
 };
