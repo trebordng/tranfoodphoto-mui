@@ -5,33 +5,24 @@ import BookLayout from "../components/BookLayout";
 import { setGlobalState, useGlobalState } from "../state/index";
 import { getBackgroundImages } from "../services";
 import Image from "next/image";
+import homeImg from "../public/page-image/landing-image.jpg";
 import { useRouter } from "next/router";
 import en from "../locales/en";
 import vie from "../locales/vie";
 const Index = ({ images, checkImages }) => {
-  const [isLoading] = useGlobalState("loading");
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : vie;
-  function onLoad() {
-    setGlobalState("loading", false);
-  }
-  
-  
-
   return (
     <BookLayout>
       <Image
-        onLoad={onLoad}
-        alt={images[0].alt}
-        title={images[0].title}
-        src={images[0].image.url}
+        src={homeImg.src}
         layout="fill"
         objectFit="cover"
         quality={100}
         className="bg-image"
       />
-      <div className="book-title">
+      <Box className="book-title">
         <Typography variant="h5">{t.pageTitle}</Typography>
         <Typography variant="h6">{t.pageAuthor}</Typography>
         <Link href="/about" passHref>
@@ -39,17 +30,9 @@ const Index = ({ images, checkImages }) => {
             {t.open}
           </Button>
         </Link>
-      </div>
+      </Box>
     </BookLayout>
   );
 };
 
 export default Index;
-export async function getStaticProps() {
-  setGlobalState("loading", true);
-  const images = (await getBackgroundImages()) || [];
-
-  return {
-    props: { images },
-  };
-}

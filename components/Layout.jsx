@@ -9,14 +9,13 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 function Layout({ children }) {
   const [currentMode] = useGlobalState("mode");
-  const [isLoading] = useGlobalState("loading");
 
   useEffect(() => {
     handleMode(currentMode);
   }, [currentMode]);
   return (
     <ThemeProvider theme={currentMode === "light" ? lightTheme : darkTheme}>
-      <Box className="background-box">
+      <Box className="background-box fade-in">
         <Container maxWidth="lg">
           <Header/>
           {children}

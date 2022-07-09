@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 import en from "../locales/en";
 import vie from "../locales/vie";
 const About = ({ images, checkImages }) => {
-  const [isLoading] = useGlobalState("loading");
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : vie;
