@@ -190,10 +190,6 @@ h6 {
 /* image */
 .bg-image {
   border-radius: 0.5rem;
-  width: 100%;
-  height: 100%;
-  background-size:cover;
-  background: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%),url(../public/page-image/landing-image.jpg);
 }
 
 
