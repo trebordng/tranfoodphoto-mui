@@ -149,10 +149,6 @@ option {
 
 
 .hidden {
-  opacity: 0 !important;
-}
-
-.invisible {
   visibility: hidden;
 }
 
