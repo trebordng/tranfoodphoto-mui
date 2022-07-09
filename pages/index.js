@@ -12,20 +12,18 @@ const Index = ({ images, checkImages }) => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : vie;
-  function showButton() {
-    setLoading(true);
-  }
+
   return (
     <BookLayout>
       <Image
-        onLoad={showButton}
+     
         src={homeImg.src}
         layout="fill"
         objectFit="cover"
         quality={100}
         className="bg-image"
       />
-      {loading && (
+    
         <Box className="book-title">
           <Typography variant="h5">{t.pageTitle}</Typography>
           <Typography variant="h6">{t.pageAuthor}</Typography>
@@ -35,7 +33,7 @@ const Index = ({ images, checkImages }) => {
             </Button>
           </Link>
         </Box>
-      )}
+    
     </BookLayout>
   );
 };
