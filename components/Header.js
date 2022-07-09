@@ -58,6 +58,7 @@ const Header = () => {
     return <Tab component="a" onClick={(e) => handleTabChange(e)} {...props} />;
   };
   useEffect(() => {
+   
     setNavbar(pages.indexOf(router.route));
   }, [router.asPath]);
   return (
