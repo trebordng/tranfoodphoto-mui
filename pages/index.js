@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import en from "../locales/en";
 import vie from "../locales/vie";
 const Index = ({ images, checkImages }) => {
+  const [isLoading] = useGlobalState('loading')
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : vie;
@@ -28,7 +29,7 @@ const Index = ({ images, checkImages }) => {
         quality={100}
         className="bg-image"
       />
-      <div className="book-title">
+      <div className={isLoading?"hidden":"book-title"}>
         <Typography variant="h5">{t.pageTitle}</Typography>
         <Typography variant="h6">{t.pageAuthor}</Typography>
         <Link href="/about" passHref>
