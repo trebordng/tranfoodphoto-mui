@@ -80,7 +80,7 @@ body {
     margin-bottom: 2vh;
   }
 
-  .book {
+  .book,.book-home {
     height: calc(100vh - 56px - 6vh);
   }
 
@@ -90,7 +90,7 @@ body {
 }
 
 @media screen and (min-width:601px) and (max-width:900px) {
-  .book {
+  .book,.book-home {
     height: calc(100vh - 64px - 15vh);
   }
 }
