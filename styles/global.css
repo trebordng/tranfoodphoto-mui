@@ -165,7 +165,7 @@ option {
 }
 
 .home-button:hover {
-  background-color: var(--hover-color);
+  color: var(--hover-color) !important;
   border: 2px solid var(--hover-color) !important;
 }
 
