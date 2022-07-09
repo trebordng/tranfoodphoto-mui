@@ -5,8 +5,8 @@ export const lightTheme = createTheme({
     colorTheme: {
       main: "linear-gradient(45deg, rgba(161,234,251,1) 0%, rgba(202,187,233,1) 100%)",
       glass:
-        " linear-gradient(45deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.2) 100%)",
-      heading: "#232127",
+        " linear-gradient(45deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.3) 100%)",
+      heading: "#403c48",
       navText: "#CABBE9",
       hover: "#b290aa",
       pageTitle: "#CABBE9",
