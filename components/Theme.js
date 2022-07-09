@@ -5,9 +5,9 @@ export const lightTheme = createTheme({
     colorTheme: {
       main: "linear-gradient(45deg, rgba(161,234,251,1) 0%, rgba(202,187,233,1) 100%)",
       glass:
-        " linear-gradient(45deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.2) 100%)",
+        " linear-gradient(45deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.3) 100%)",
       heading: "#232127",
-      navText: "#827895",
+      navText: "#CABBE9",
       hover: "#b290aa",
       pageTitle: "#CABBE9",
       pageAuthor: "#FDFDFD",
@@ -21,7 +21,7 @@ export const darkTheme = createTheme({
       glass:
         " linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 60%)",
       heading: "#d8f9ff",
-      navText: "#01032b",
+      navText: "#96BAFF",
       hover: "#7DEDFF",
       pageTitle: "#96BAFF",
       pageAuthor: "#d8f9ff",
@@ -52,13 +52,13 @@ export function handleMode(currentMode) {
       lightTheme.palette.colorTheme.heading
     );
     root.style.setProperty(
-        "--pageTitle-color",
-        lightTheme.palette.colorTheme.pageTitle
-      );
-      root.style.setProperty(
-        "--pageAuthor-color",
-        lightTheme.palette.colorTheme.pageAuthor
-      );
+      "--pageTitle-color",
+      lightTheme.palette.colorTheme.pageTitle
+    );
+    root.style.setProperty(
+      "--pageAuthor-color",
+      lightTheme.palette.colorTheme.pageAuthor
+    );
   } else {
     root.style.setProperty(
       "--background-color",
@@ -75,12 +75,12 @@ export function handleMode(currentMode) {
       darkTheme.palette.colorTheme.heading
     );
     root.style.setProperty(
-        "--pageTitle-color",
-        darkTheme.palette.colorTheme.pageTitle
-      );
-      root.style.setProperty(
-        "--pageAuthor-color",
-        darkTheme.palette.colorTheme.pageAuthor
-      );
+      "--pageTitle-color",
+      darkTheme.palette.colorTheme.pageTitle
+    );
+    root.style.setProperty(
+      "--pageAuthor-color",
+      darkTheme.palette.colorTheme.pageAuthor
+    );
   }
 }

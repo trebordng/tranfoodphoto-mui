@@ -17,7 +17,11 @@ body {
 
 /* Background */
 .background-box {
-  background: var(--background-color);
+
+  background: url(../public/page-image/landing-image.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  background-size: cover;
   min-height: 100vh;
   padding: 5vh 0 0 0;
 }
@@ -50,15 +54,21 @@ body {
   height: calc(100vh - 15vh - 99px);
 }
 
-.book-title {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  top: 50%;
-  left: 200px;
-  width: 300px;
-  text-align: center;
+.book-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  position: relative;
+  height: calc(100vh - 15vh - 99px);
 
+}
+
+.book-title {
+  text-align: center;
+  background: var(--glass-color);
+  padding: 6vw 6vh;
+  border-radius: 0.5rem;
 }
 
 @media screen and (max-width:600px) {
@@ -70,57 +80,19 @@ body {
     margin-bottom: 2vh;
   }
 
-  .book,
-  .loading-bg {
-
+  .book {
     height: calc(100vh - 56px - 6vh);
   }
 
   .MuiDrawer-paper {
     width: 40vw !important;
   }
-
-  .book-title {
-    left: 50%;
-    padding: 1vw 1vh;
-    border-radius: 0.5rem;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
-  }
 }
 
 @media screen and (min-width:601px) and (max-width:900px) {
-
-  .book-title {
-    border-radius: 0.5rem;
-    padding: 1vw 1vh;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
-    left: 50%;
-  }
-
-  .book,
-  .loading-bg {
+  .book {
     height: calc(100vh - 64px - 15vh);
   }
-}
-
-.loading-bg {
-  margin: 5vh 0 0 0;
-  height: calc(100vh - 20vh - 64px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loading {
-  color: var(--heading-color) !important;
-  width: 80px !important;
-  height: 80px !important;
 }
 
 .right-nav {
@@ -138,8 +110,8 @@ body {
 .select-language {
   background: transparent;
 
-  border: 1px solid var(--heading-color);
-  color: var(--heading-color);
+  border: 1px solid var(--navText-color);
+  color: var(--navText-color);
   outline: none;
 }
 
@@ -179,7 +151,7 @@ h5 {
 }
 
 h6 {
-  font-size:1rem !important;
+  font-size: 1rem !important;
   color: var(--pageAuthor-color) !important;
   font-weight: lighter !important;
   font-style: italic;
@@ -197,7 +169,9 @@ h6 {
 
 /* Customizing MUI  */
 .MuiDrawer-paper {
-  background: var(--background-color) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: var(--glass-color) !important;
   min-width: 25vw !important;
   color: var(--navText-color) !important;
 }
@@ -215,11 +189,6 @@ h6 {
   max-width: 110px !important;
 
 }
-
-.MuiTab-root,
-select,
-.text-logo,
-.MuiTypography-root {}
 
 .MuiSwitch-thumb {
   color: var(--heading-color) !important;
