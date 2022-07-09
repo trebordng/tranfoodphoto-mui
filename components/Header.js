@@ -59,7 +59,7 @@ const Header = () => {
   };
   useEffect(() => {
     setNavbar(pages.indexOf(router.route));
-  }, []);
+  }, [router.asPath]);
   return (
     <AppBar className="nav glass">
       <Toolbar>

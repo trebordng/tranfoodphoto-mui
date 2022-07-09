@@ -9,7 +9,7 @@ export const lightTheme = createTheme({
       heading: "#232127",
       navText: "#827895",
       hover: "#b290aa",
-      pageTitle: "#A1EAFB",
+      pageTitle: "#CABBE9",
       pageAuthor: "#FDFDFD",
     },
   },

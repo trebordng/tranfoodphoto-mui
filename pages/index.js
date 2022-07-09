@@ -31,7 +31,11 @@ const Index = ({ images, checkImages }) => {
       <Box className="book-title" component="div">
         <Typography variant="h5">{t.pageTitle}</Typography>
         <Typography variant="h6">{t.pageAuthor}</Typography>
-        <Button variant="outlined" className="home-button" >Open</Button>
+        <Link href="/about" passHref>
+          <Button variant="outlined" className="home-button">
+            {t.open}
+          </Button>
+        </Link> 
       </Box>
     </BookLayout>
   );
