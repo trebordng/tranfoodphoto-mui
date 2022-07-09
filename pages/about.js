@@ -9,14 +9,16 @@ import { useRouter } from "next/router";
 import en from "../locales/en";
 import vie from "../locales/vie";
 const About = ({ images, checkImages }) => {
-  const [isLoading] = useGlobalState('loading')
+  const [isLoading] = useGlobalState("loading");
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : vie;
   function onLoad() {
     setGlobalState("loading", false);
   }
-  useEffect(() => {}, []);
+  useEffect(() => {
+    setGlobalState("loading", true);
+  }, []);
   return (
     <BookLayout>
       <Image
@@ -36,7 +38,7 @@ const About = ({ images, checkImages }) => {
           <Button variant="outlined" className="home-button">
             {t.open}
           </Button>
-        </Link> 
+        </Link>
       </div>
     </BookLayout>
   );
