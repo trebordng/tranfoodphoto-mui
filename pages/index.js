@@ -21,7 +21,7 @@ const Index = ({ images, checkImages }) => {
         src={homeImg.src}
         layout="fill"
         objectFit="cover"
-        quality={100}
+        quality={50}
         className="bg-image"
       />
     
