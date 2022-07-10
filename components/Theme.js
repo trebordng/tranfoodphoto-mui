@@ -3,14 +3,14 @@ import { createTheme } from "@mui/material/styles";
 export const lightTheme = createTheme({
   palette: {
     colorTheme: {
-      main: "linear-gradient(45deg, rgba(161,234,251,1) 0%, rgba(202,187,233,1) 100%)",
+      main: "linear-gradient(8deg, rgba(161,234,251,1) 0%, rgba(255,206,243,1) 100%)",
       glass:
         " linear-gradient(45deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.3) 100%)",
-      heading: "#403c48",
-      navText: "#CABBE9",
-      hover: "#b290aa",
-      pageTitle: "#CABBE9",
-      pageAuthor: "#FDFDFD",
+      heading: "#ffbc1b",
+      navText: "#222831",
+      hover: "#EEEEEE",
+      pageTitle: "#ffbc1b",
+      pageAuthor: "#EEEEEE",
     },
   },
 });

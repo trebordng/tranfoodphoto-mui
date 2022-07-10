@@ -52,25 +52,20 @@ body {
   border-radius: 0.5rem;
   position: relative;
   height: calc(100vh - 15vh - 99px);
-}
-
-.book-home {
-  display: flex;
+  display:flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.5rem;
-  position: relative;
-  height: calc(100vh - 15vh - 99px);
-
 }
 
 .book-title {
   text-align: center;
-  background: var(--glass-color);
-  padding: 5vh 5vw;
-  border-radius: 0.5rem;
 }
-
+@media screen and (max-height:600px){
+  .portrait-home img{
+    width:120px !important;
+    height: 120px !important;
+  }
+}
 @media screen and (max-width:600px) {
   .background-box {
     padding: 2vh 0 0 0;
@@ -80,7 +75,7 @@ body {
     margin-bottom: 2vh;
   }
 
-  .book,.book-home {
+  .book {
     height: calc(100vh - 56px - 6vh);
   }
 
@@ -90,7 +85,7 @@ body {
 }
 
 @media screen and (min-width:601px) and (max-width:900px) {
-  .book,.book-home {
+  .book {
     height: calc(100vh - 64px - 15vh);
   }
 }
@@ -118,14 +113,17 @@ option {
   color: var(--heading-color);
   background-color: var(--navText-color);
 }
-
+.select-language:hover{
+  border-color: var(--hover-color);
+  color:var(--hover-color);
+}
 
 .hidden {
   visibility: hidden;
 }
 
 .text-logo {
-  color: var(--heading-color);
+  color: var(--navText-color);
   font-weight: bold;
 }
 
@@ -152,7 +150,6 @@ option {
 /* button configuration */
 
 /* text */
-
 h5 {
   color: var(--pageTitle-color) !important;
   font-weight: bolder !important;
@@ -164,7 +161,6 @@ h6 {
   font-weight: lighter !important;
   font-style: italic;
 }
-
 /* text */
 
 /* image */
