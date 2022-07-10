@@ -5,7 +5,7 @@ export const lightTheme = createTheme({
     colorTheme: {
       main: "linear-gradient(8deg, rgba(161,234,251,1) 0%, rgba(255,206,243,1) 100%)",
       glass:
-        " linear-gradient(45deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.4) 100%)",
+        " linear-gradient(45deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.3) 100%)",
       heading: "#ffbc1b",
       navText: "#222831",
       hover: "#EEEEEE",
@@ -19,7 +19,7 @@ export const darkTheme = createTheme({
     colorTheme: {
       main: "linear-gradient(171deg, rgba(124,131,253,1) 0%, rgba(125,237,255,1) 100%)",
       glass:
-        " linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 60%)",
+        " linear-gradient(45deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 60%)",
       heading: "#d8f9ff",
       navText: "#96BAFF",
       hover: "#7DEDFF",

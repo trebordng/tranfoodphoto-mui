@@ -2,7 +2,6 @@ import {
   Drawer,
   List,
   ListItem,
-  ListItemButton,
   ListItemText,
 } from "@mui/material";
 import React, { useState, useEffect } from "react";

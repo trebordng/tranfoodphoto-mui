@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import React, { useEffect } from "react";
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import React from "react";
 const BookLayout = ({ children }) => {
   return <Box className="book glass">{children}</Box>
 };

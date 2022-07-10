@@ -17,7 +17,6 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 import BookIcon from "@mui/icons-material/Book";
 import OutdoorGrillIcon from "@mui/icons-material/OutdoorGrill";
 import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
-import { lightTheme, darkTheme } from "./Theme";
 import { setGlobalState, useGlobalState } from "../state/index";
 import NavDrawer from "./NavDrawer";
 import Image from "next/image";
