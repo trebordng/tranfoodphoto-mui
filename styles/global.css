@@ -62,8 +62,8 @@ body {
 }
 @media screen and (max-height:600px){
   .portrait-home img{
-    width:120px !important;
-    height: 120px !important;
+    width:100px !important;
+    height: 100px !important;
   }
 }
 @media screen and (max-width:600px) {
